@@ -1,0 +1,141 @@
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #f0f4f8; 
+    color: #1a1a1a;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    line-height: 1.6;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.about-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    margin: 0 auto 20px;
+    transition: all 0.3s ease-in-out; 
+    cursor: pointer;
+}
+
+.profile-img:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    border-color: #ffffff;
+}
+
+.subtitle {
+    font-weight: 600;
+    color: #334e68;
+    letter-spacing: 1px;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.flex-container {
+    display: flex;
+    gap: 20px;
+}
+
+.flex-container .card {
+    flex: 1;
+}
+
+h1 {
+    font-size: 2.2rem;
+    color: #102a43;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #0560c9;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-bottom: 2px solid #f0f4f8;
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+h3 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #243b53;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+.vertical-list li {
+    margin-bottom: 12px;
+}
+
+.contact-grid {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.contact-item {
+    font-size: 1.1rem;
+}
+
+.contact-item a {
+    color: #0560c9;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .flex-container, .contact-grid {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .contact-grid {
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}
